@@ -31,7 +31,7 @@ const getCspContent = (context) => {
   return `upgrade-insecure-requests;
     default-src 'none';
     prefetch-src 'self';
-    style-src 'self' 'unsafe-inline';
+    style-src 'self';
     font-src 'self';
     frame-src 'self' https://www.youtube-nocookie.com https://aws.demdex.net https://dpm.demdex.net;
     connect-src 'self' *.shortbread.aws.dev https://amazonwebservices.d2.sc.omtrdc.net https://aws.demdex.net https://dpm.demdex.net https://cm.everesttech.net https://a0.awsstatic.com/ https://d2c.aws.amazon.com https://vs.aws.amazon.com
