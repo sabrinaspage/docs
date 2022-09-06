@@ -1,11 +1,10 @@
-import styled from "@emotion/styled";
-import {MQLaptop} from "../media";
+import styled from '@emotion/styled';
+import { MQLaptop, MQTablet } from '../media';
 
 export const SecondaryNavStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
-  flex: 1;
   align-items: center;
 
   ${MQLaptop} {
@@ -17,7 +16,7 @@ export const SecondaryNavStyle = styled.div`
     white-space: nowrap;
   }
 
-  div {
+  .secondary-nav-links {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -44,6 +43,15 @@ export const SecondaryNavStyle = styled.div`
       padding: 0.875rem 0 0.875rem;
       color: var(--font-color);
     }
+
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1875)
+    );
+    background-size: 5% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 `;
 
@@ -51,7 +59,7 @@ export const HostStyle = styled.div`
   z-index: 1;
   display: block;
   position: sticky;
-  top: 0;
+  top: var(--docs-dev-center-nav);
   background-color: var(--bg-color-secondary);
 `;
 
@@ -84,4 +92,12 @@ export const ShadowStyle = styled.div`
   ${MQLaptop} {
     display: none !important;
   }
+`;
+
+export const SearchBarRow = styled.div`
+  padding: 10px;
+`;
+
+export const SearchBarContainer = styled.div`
+  margin: 0px 1.25rem;
 `;
