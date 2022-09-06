@@ -60,7 +60,7 @@ export const LinkActiveStyle = styled.a`
   font-weight: bold;
 
   ${MQLaptop} {
-    border-bottom: 0.125rem solid var(--font-color);
+    border-bottom: 0.125rem solid var(--color-orange-hv);
   }
 
   > span {
