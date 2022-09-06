@@ -4,7 +4,6 @@ import {
   LinkInactiveStyle,
   SecondaryNavStyle,
   SearchBarContainer,
-  SearchBarRow,
   ShadowStyle
 } from './styles';
 import {
@@ -27,8 +26,6 @@ export default function SecondaryNav() {
   const router = useRouter();
   const path = router.asPath;
   const filterKeys = parseLocalStorage('filterKeys', {});
-
-  const onDesktop = useBreakpointValue({ base: false, large: true });
 
   let windowInnerWidth;
   if (typeof window === 'undefined') {
@@ -86,8 +83,13 @@ export default function SecondaryNav() {
   return (
     <HostStyle>
       <Container>
-        <SecondaryNavStyle id="secondary-nav" ref={navLinksContainerRef}>
-          <div className="secondary-nav-links">
+        <SecondaryNavStyle
+          id="secondary-nav"
+          style={{
+            alignItems: isMobileState ? 'flex-start' : 'center'
+          }}
+        >
+          <div className="secondary-nav-links" ref={navLinksContainerRef}>
             {[
               {
                 label: 'Getting Started',
@@ -160,22 +162,17 @@ export default function SecondaryNav() {
                 );
               }
             })}
-            {/* <ShadowStyle /> */}
           </div>
-          {!isMobileState && (
-            <SearchBarContainer>
-              <SearchBar />
-            </SearchBarContainer>
-          )}
-        </SecondaryNavStyle>
-      </Container>
-      {isMobileState && (
-        <SearchBarRow>
-          <SearchBarContainer>
+          {isMobileState && <ShadowStyle />}
+          <SearchBarContainer
+            style={{
+              width: '120px'
+            }}
+          >
             <SearchBar />
           </SearchBarContainer>
-        </SearchBarRow>
-      )}
+        </SecondaryNavStyle>
+      </Container>
     </HostStyle>
   );
 }
