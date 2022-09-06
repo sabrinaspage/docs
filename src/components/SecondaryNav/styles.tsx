@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import {MQLaptop} from "../media";
+import styled from '@emotion/styled';
+import { MQLaptop } from '../media';
 
 export const SecondaryNavStyle = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ export const HostStyle = styled.div`
   z-index: 1;
   display: block;
   position: sticky;
-  top: 0;
+  top: var(--docs-dev-center-nav-height);
   background-color: var(--bg-color-secondary);
 `;
 
@@ -59,7 +59,7 @@ export const LinkActiveStyle = styled.a`
   font-weight: bold;
 
   ${MQLaptop} {
-    border-bottom: 0.125rem solid var(--font-color);
+    border-bottom: 0.125rem solid var(--color-orange-hv);
   }
 
   > span {

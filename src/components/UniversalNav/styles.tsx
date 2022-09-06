@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import {MQFablet, MQTablet} from "../media";
+import styled from '@emotion/styled';
+import { MQFablet, MQTablet } from '../media';
 
 type NavProps = {
   blend?: boolean;
@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   background-color: var(--bg-color);
 `;
 
-export const NavContent = styled.div<NavProps>(({blend}) => {
+export const NavContent = styled.div<NavProps>(({ blend }) => {
   if (blend) {
     return `
     display: flex;
@@ -109,8 +109,6 @@ export const Branding = styled.div`
 
 export const SearchContainer = styled.div`
   width: 100%;
-  order: 3;
-  margin-top: 1.5rem;
   flex: auto;
   ${MQTablet} {
     flex: 1 15rem;
@@ -120,7 +118,7 @@ export const SearchContainer = styled.div`
 `;
 
 export const Links = styled.div<NavProps>(
-  ({blend}) => `
+  ({ blend }) => `
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -147,7 +145,7 @@ export const Links = styled.div<NavProps>(
     }
     `}
   }
-`,
+`
 );
 
 export const AboutInternalAmplifyLink = styled.span`

@@ -7,6 +7,7 @@ import { Container } from '../Container';
 import { useRouter } from 'next/router';
 import { GlobalNav, NavMenuItem } from '../GlobalNav/GlobalNav';
 import { NAV_LINKS } from '../../utils/globalnav';
+import React from 'react';
 
 export default function Layout({
   children,
@@ -76,11 +77,7 @@ export default function Layout({
         </Head>
       )}
       <GlobalNav links={NAV_LINKS as NavMenuItem[]} currentSite={'Docs'} />
-      {/* <UniversalNav
-        heading="Amplify Docs"
-        brandIcon="/assets/logo-light.svg"
-        blend={false}
-      /> */}
+      <UniversalNav blend={false} />
       <SecondaryNav />
       <Container backgroundColor="bg-color-tertiary">
         <LayoutStyle>{children}</LayoutStyle>
