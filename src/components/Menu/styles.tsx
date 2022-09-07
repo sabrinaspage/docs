@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const MenuHeaderStyle = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const MenuStyle = styled.div`
 
     > div {
       position: sticky;
-      top: 3.375rem;
+      top: calc(3.375rem + var(--docs-dev-center-nav-height));
 
       display: flex;
       flex-direction: column;
