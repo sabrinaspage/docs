@@ -4,12 +4,7 @@ import Footer from '../Footer/index';
 import { LayoutStyle } from './styles';
 import { Container } from '../Container';
 import { useRouter } from 'next/router';
-import { GlobalNav, NavMenuItem } from '../GlobalNav/GlobalNav';
-import {
-  LEFT_NAV_LINKS,
-  RIGHT_NAV_LINKS,
-  SOCIAL_LINKS
-} from '../../utils/globalnav';
+import { DevCenterNav } from 'dev-center-shared-components';
 import React from 'react';
 
 export default function Layout({
@@ -79,12 +74,7 @@ export default function Layout({
           />
         </Head>
       )}
-      <GlobalNav
-        leftLinks={LEFT_NAV_LINKS as NavMenuItem[]}
-        rightLinks={RIGHT_NAV_LINKS as NavMenuItem[]}
-        socialLinks={SOCIAL_LINKS as NavMenuItem[]}
-        currentSite={'Docs'}
-      />
+      <DevCenterNav currentSite="Learn" homePathHref="/" />
       <SecondaryNav />
       <Container backgroundColor="bg-color-tertiary">
         <LayoutStyle>{children}</LayoutStyle>

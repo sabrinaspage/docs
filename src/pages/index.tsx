@@ -12,12 +12,7 @@ import Footer from '../components/Footer';
 import SecondaryNav from '../components/SecondaryNav';
 
 import { trackPageVisit } from '../utils/track';
-import { NavMenuItem, GlobalNav } from '../components/GlobalNav';
-import {
-  LEFT_NAV_LINKS,
-  RIGHT_NAV_LINKS,
-  SOCIAL_LINKS
-} from '../utils/globalnav';
+import { DevCenterNav } from 'dev-center-shared-components';
 import React from 'react';
 
 const meta = {
@@ -72,12 +67,7 @@ const Page = () => {
           key="twitter:image"
         />
       </Head>
-      <GlobalNav
-        leftLinks={LEFT_NAV_LINKS as NavMenuItem[]}
-        rightLinks={RIGHT_NAV_LINKS as NavMenuItem[]}
-        socialLinks={SOCIAL_LINKS as NavMenuItem[]}
-        currentSite={'Docs'}
-      />
+      <DevCenterNav currentSite="Learn" homePathHref="/" />
       <SecondaryNav />
       <Hero>
         <h1 className="font-weight-300">Amplify Documentation</h1>

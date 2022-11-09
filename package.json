@@ -27,6 +27,7 @@
     "array-flatten": "^3.0.0",
     "aws-amplify": "^4.3.34",
     "copy-to-clipboard": "^3.2.1",
+    "dev-center-shared-components": "/Users/timngyn/Desktop/dev-center-shared-components-0.0.0.tgz",
     "dotenv": "^16.0.0",
     "emotion": "^10.0.23",
     "extract-mdx-metadata": "^2.0.0",
